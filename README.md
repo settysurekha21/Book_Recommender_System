@@ -25,19 +25,19 @@ Before running the application, you'll need the following prerequisites:\
 \
 **Installation**\
 Clone the repository:\
-git clone https://github.com/settysurekha21/Book_Recommender_System.git\
+git clone https://github.com/settysurekha21/Book_Recommender_System.git   \
 Change to the project directory:\
 cd book-recommendation-system\
 Create a virtual environment (recommended):\
 python -m venv venv\
-source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'\
+source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'  \
 Install the required dependencies:\
-pip install -r requirements.txt\
+pip install -r requirements.txt  \
 \
 **Usage**\
 To run the application, execute the following command:\
 streamlit run app.py\
-This will start the Streamlit application, and you can access it in your web browser at http://localhost:8501.\
+This will start the Streamlit application, and you can access it in your web browser at http://localhost:8501.  \
 \
 **Features**\
 The book recommendation system and Streamlit frontend offer the following features:\
