@@ -25,7 +25,7 @@ Before running the application, you'll need the following prerequisites:
 
 **Installation**
 Clone the repository:
-git clone https://github.com/settysurekha21/book-recommendation-system.git
+git clone https://github.com/settysurekha21/Book_Recommender_System.git
 Change to the project directory:
 cd book-recommendation-system
 Create a virtual environment (recommended):
