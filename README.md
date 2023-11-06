@@ -35,22 +35,22 @@ Install the required dependencies:\
 pip install -r requirements.txt\
 \
 **Usage**\
-To run the application, execute the following command:
-streamlit run app.py
-This will start the Streamlit application, and you can access it in your web browser at http://localhost:8501.
-
-**Features**
-The book recommendation system and Streamlit frontend offer the following features:
-
-Search for books by typing or selecting from a list.
-View detailed information about a selected book, including its cover, author, title, description, genre, and publisher.
-Receive book recommendations based on collaborative filtering.
-Explore books by the same author or from the same publisher.
-Discover top popular books.
-
-**License**
-This project is licensed under the MIT License. See the LICENSE file for details.
-
+To run the application, execute the following command:\
+streamlit run app.py\
+This will start the Streamlit application, and you can access it in your web browser at http://localhost:8501.\
+\
+**Features**\
+The book recommendation system and Streamlit frontend offer the following features:\
+\
+-Search for books by typing or selecting from a list.\
+-View detailed information about a selected book, including its cover, author, title, description, genre, and publisher.\
+-Receive book recommendations based on collaborative filtering.\
+-Explore books by the same author or from the same publisher.\
+-Discover top popular books.\
+\
+**License**\
+This project is licensed under the MIT License. See the LICENSE file for details.\
+\
 Enjoy using the book recommendation system and exploring your favorite books!
 
 
