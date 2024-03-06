@@ -5,6 +5,10 @@ import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
 import requests
+import os
+import csv
+from datetime import datetime
+
 
 def main():
     st.header("Books Recommender System")
@@ -13,6 +17,25 @@ def main():
     final_rating = pickle.load(open(r'E:/book recommender system/artifacts/final_rating.pkl', 'rb'))
     book_pivot = pickle.load(open(r'E:/book recommender system/artifacts/book_pivot.pkl', 'rb'))
 
+    # Function to save review to CSV file
+    def save_review(user_name, book_title, user_review):
+        timestamp = datetime.now().strftime("%dth %b, %Y")
+        if not os.path.exists('reviews.csv'):
+            with open('reviews.csv', 'w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["User Name", "Book Title", "Review","Timestamp"])
+
+        with open('reviews.csv', 'a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([user_name, book_title, user_review, timestamp])
+
+    # Function to load reviews from CSV file
+    def load_reviews():
+        if os.path.exists('reviews.csv'):
+            reviews_df = pd.read_csv('reviews.csv')
+            return reviews_df
+        else:
+            return pd.DataFrame(columns=["User Name", "Book Title", "Review", "Timestamp"])
 
 
     # Define a function to search for a book and retrieve its ISBN
@@ -227,6 +250,33 @@ def main():
                 st.write("No books found by the same Publisher.")
         else:
             st.write("Invalid Book Name!!")
+
+     # Get user name
+    user_name = st.text_input("Enter your name:", "")
+
+    # Get user review
+    st.subheader("Write Your Review")
+    book_title = st.text_input("Enter the book title:", "")
+    user_review = st.text_area("Enter your review here:", "")
+
+    # Submit review button
+    if st.button("Submit Review"):
+        if user_name and book_title and user_review:
+            # Save review to CSV file
+            save_review(user_name, book_title, user_review)
+            st.success("Review submitted successfully!")
+        else:
+            st.warning("Please enter your name, the book title, and your review before submitting.")
+
+    # Load and display existing reviews
+    reviews_df = load_reviews()
+    st.subheader("Reviews")
+    if not reviews_df.empty:
+        for index, row in reviews_df.iterrows():
+            st.write(f"**{row['User Name']} ({row['Book Title']})** - {row['Timestamp']}")
+            st.write(f"*\"{row['Review']}\"*", unsafe_allow_html=True)
+            st.markdown('<hr style="border-top: 2px solid #FF4B4B;">', unsafe_allow_html=True)  # Add a horizontal line in FF4B4B color
+   
 
 
 
