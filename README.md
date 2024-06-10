@@ -1,5 +1,5 @@
 **Book Recommendation System with Collaborative Filtering and Streamlit**\
-This project is a book recommendation system that uses collaborative filtering to suggest books to users based on their preferences. The frontend of the system is built using Streamlit, a Python library for creating interactive web applications. Users can type or select a book, and upon selection, the system displays detailed information about the selected book, as well as recommended books, books by the same author, books by the same publisher, and top popular books.\
+This project is a book recommendation system that uses collaborative filtering to suggest books to users based on their preferences. The frontend of the system is built using Streamlit, a Python library for creating interactive web applications. Users can type or select a book, and upon selection, the system displays detailed information about the selected book, as well as recommended books, books by the same author, books by the same publisher, and top popular books. Users can explore different books based on mood, genre and Indian languages.\
 \
 **Table of Contents**\
 -Introduction\
@@ -47,6 +47,8 @@ The book recommendation system and Streamlit frontend offer the following featur
 -Receive book recommendations based on collaborative filtering.\
 -Explore books by the same author or from the same publisher.\
 -Discover top popular books.\
+-Explore book recommendations based on mood and genre.\
+-Explore book recommendations based on various Indian languages.\
 \
 **License**\
 This project is licensed under the MIT License. See the LICENSE file for details.\
